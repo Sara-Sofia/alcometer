@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import Options from './Components/Options';
 
 function App() {
 // tilamuuttujat:
@@ -50,11 +51,15 @@ function App() {
     </div>
     <div>
       <label>Bottles: </label>
-      <input type="number" value={bottles} onChange={e => setBottles(e.target.value)}></input>
+      <select value={bottles} onChange={e => setBottles(e.target.value)}>
+        <Options/>
+      </select>
     </div>
     <div>
       <label>Time: </label>
-      <input type="number" value={time} onChange={e => setTime(e.target.value)}></input>
+     <select value={time} onChange={e => setTime(e.target.value)}>
+      {<Options/>}
+     </select>
     </div>
     <div>
       <label>Gender: </label>
